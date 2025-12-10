@@ -1,0 +1,23 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Estado pressionado -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#3349aa"/> <!-- azul mais escuro no click -->
+            <corners android:radius="28dp"/>
+            <padding android:left="24dp" android:top="14dp"
+                android:right="24dp" android:bottom="14dp"/>
+        </shape>
+    </item>
+
+    <!-- Estado normal -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#3b5ccc"/> <!-- azul Syrios -->
+            <corners android:radius="28dp"/>
+            <padding android:left="24dp" android:top="14dp"
+                android:right="24dp" android:bottom="14dp"/>
+        </shape>
+    </item>
+
+</selector>

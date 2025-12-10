@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CAMADA 1 – Fundo azul -->
+    <View
+        android:id="@+id/bgBlue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#3b5ccc"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Foto -->
+        <ImageView
+            android:id="@+id/imgFoto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@android:drawable/sym_def_app_icon"
+            android:background="@drawable/circle_white"
+            android:padding="5dp"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:id="@+id/txtEscola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome da Escola"
+                style="@style/SyriosTitle" />
+
+            <TextView
+                android:id="@+id/txtNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nome do Usuário"
+                style="@style/SyriosSubtitle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- CAMADA 2 – Folha branca -->
+    <LinearLayout
+        android:id="@+id/bodySheet"
+        android:orientation="vertical"
+        android:background="@drawable/sheet_white_only_top"
+        android:padding="20dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtTituloBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atalhos"
+            android:textColor="#3b5ccc"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- Cards -->
+        <LinearLayout
+            android:id="@+id/cardOfertas"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="@drawable/card_round"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚   Minhas Ofertas"
+                android:textSize="18sp"
+                android:textColor="#444" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/cardOcorrencias"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="@drawable/card_round"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧑‍🏫   Minhas Ocorrência"
+                android:textSize="18sp"
+                android:textColor="#444" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"/>
+
+        <LinearLayout
+            android:id="@+id/cardHistorico"
+            android:orientation="horizontal"
+            android:padding="15dp"
+            android:background="@drawable/card_round"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🕒   Histórico"
+                android:textSize="18sp"
+                android:textColor="#444" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottomShadow"
+        android:layout_width="0dp"
+        android:layout_height="14dp"
+        android:background="@drawable/shadow_top"
+        app:layout_constraintBottom_toTopOf="@id/bottomMenu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CAMADA 3 – MENU INFERIOR -->
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:elevation="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:background="@drawable/sheet_white_top_round"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/menuHome"
+            android:text="🏠"
+            android:textSize="26sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/menuOcorrencias"
+            android:text="🧑‍🏫"
+            android:textSize="26sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/menuOfertas"
+            android:text="📚"
+            android:textSize="26sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/menuExtra"
+            android:text="☰"
+            android:textSize="28sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
